@@ -5,9 +5,11 @@
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "outDir": "build"
   },
   "files": [
-    "app/app.ts"
+    "app/app.ts",
+    "app/components/HomeComponent.ts"
   ]
 }
