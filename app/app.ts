@@ -1,9 +1,18 @@
+import {provide, Component} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
-import {Component} from 'angular2/core';
-//import { routerInjectables } from 'angular2/router';
+import {
+    ROUTER_DIRECTIVES,
+    ROUTER_PROVIDERS,
+    HashLocationStrategy,
+    LocationStrategy,
+    RouteConfig,
+} from 'angular2/router';
+
+import {HomeComponent} from 'components/HomeComponent';
 
 @Component({
     selector: 'app',
+    directives: [ROUTER_DIRECTIVES],
     template: `
         <div class="row">
             <div class="col-md-3 main-tiles">
@@ -19,13 +28,18 @@ import {Component} from 'angular2/core';
                 <p>Одбери игра</p>
             </div>
         </div>
+        <div class="row">
+            <router-outlet></router-outlet>
+        </div>
   `
 })
-
-// @RouteConfig([
-//   { path:'/games', name: 'Games', component: CrisisListComponent }
-// ])
-
+@RouteConfig([
+    { path: '/', name: 'root', redirectTo: ['/Home'] },
+    { path: '/home', name: 'Home', component: HomeComponent }
+])
 export class App { }
 
-bootstrap(App);
+bootstrap(App, [
+    ROUTER_PROVIDERS,
+    provide(LocationStrategy, { useClass: HashLocationStrategy })
+]);
