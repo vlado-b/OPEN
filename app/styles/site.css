@@ -11,3 +11,7 @@
     text-transform: uppercase;
     text-align: center;
 }
+
+a.link{
+    cursor: pointer;
+}
