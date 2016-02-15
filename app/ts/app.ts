@@ -26,7 +26,7 @@ import {GamesComponent} from '../components/GamesComponent';
                 <p>Подесување на постоечки профил</p>
             </div>
             <div class="col-md-3 main-tiles">
-                <p><a [routerLink]="['/Games']>Одбери игра</a></p>
+                <p><a [routerLink]="['/Games']">Одбери игра</a></p>
             </div>
         </div>
         <div class="row">
