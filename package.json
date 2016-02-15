@@ -5,7 +5,7 @@
     "main": "./app/main.js",
     "scripts": {
         "server:dev": "webpack-dev-server --progress --profile --colors --display-error-details --display-cached  --content-base src/",
-        "build": "webpack --progress --profile --colors --display-error-details --display-cached gulp main",
+        "build": "webpack --progress --profile --colors --display-error-details --display-cached",
         "start": "gulp main-scripts | http-server -a localhost -p 8000",
         "startWin": "electron app"
     },
