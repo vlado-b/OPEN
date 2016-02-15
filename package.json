@@ -1,12 +1,12 @@
 {
-    "name": "image-size-calculator",
+    "name": "OPEN",
     "version": "0.0.1",
     "description": "",
-    "main": "./app/main.js",
+    "main": "./app/js/main.js",
     "scripts": {
         "server:dev": "webpack-dev-server --progress --profile --colors --display-error-details --display-cached  --content-base src/",
-        "build": "webpack --progress --profile --colors --display-error-details --display-cached",
-        "start": "gulp main-scripts | http-server -a localhost -p 8000",
+        "build": "gulp main-scripts | webpack --progress --profile --colors --display-error-details --display-cached",
+        "start": "http-server -a localhost -p 8000",
         "startWin": "electron app"
     },
     "author": "Auth0",

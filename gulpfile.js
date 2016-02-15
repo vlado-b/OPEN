@@ -8,7 +8,7 @@ var gulp       = require('gulp'),
 gulp.task('main-scripts', function() {
     var files = [
          './node_modules/jquery/dist/jquery.min.js',
-         './app/jqueryelectron.js',
+         './app/js/jqueryelectron.js',
          './node_modules/bootstrap/dist/js/bootstrap.min.js'
      ];
     return browserify({ entries: files })

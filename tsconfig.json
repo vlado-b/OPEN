@@ -9,7 +9,7 @@
     "outDir": "build"
   },
   "files": [
-    "app/app.ts",
+    "app/js/app.ts",
     "app/components/HomeComponent.ts"
   ]
 }
