@@ -9,6 +9,7 @@ import {
 } from '../../node_modules/angular2/router';
 
 import {HomeComponent} from '../components/HomeComponent';
+import {GamesComponent} from '../components/GamesComponent';
 
 @Component({
     selector: 'app',
@@ -25,7 +26,7 @@ import {HomeComponent} from '../components/HomeComponent';
                 <p>Подесување на постоечки профил</p>
             </div>
             <div class="col-md-3 main-tiles">
-                <p>Одбери игра</p>
+                <p><a [routerLink]="['/Games']>Одбери игра</a></p>
             </div>
         </div>
         <div class="row">
@@ -35,7 +36,8 @@ import {HomeComponent} from '../components/HomeComponent';
 })
 @RouteConfig([
     { path: '/', name: 'root', redirectTo: ['/Home'] },
-    { path: '/home', name: 'Home', component: HomeComponent }
+    { path: '/home', name: 'Home', component: HomeComponent },
+    { path: '/games', name: 'Games', component: GamesComponent }
 ])
 export class App { }
 

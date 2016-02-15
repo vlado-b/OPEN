@@ -10,6 +10,7 @@
   },
   "files": [
     "app/ts/app.ts",
-    "app/components/HomeComponent.ts"
+    "app/components/HomeComponent.ts",
+    "app/components/GamesComponent.ts"
   ]
 }
