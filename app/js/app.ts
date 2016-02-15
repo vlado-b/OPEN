@@ -14,25 +14,11 @@ import {GamesComponent} from '../components/GamesComponent';
 @Component({
     selector: 'app',
     directives: [ROUTER_DIRECTIVES],
-    template: `
-        <div class="row">
-            <div class="col-md-3 main-tiles">
-                <p>Креирај нов профил</p>
-            </div>
-            <div class="col-md-3 main-tiles">
-                <p>Логирај се</p>
-            </div>
-            <div class="col-md-3 main-tiles">
-                <p>Подесување на постоечки профил</p>
-            </div>
-            <div class="col-md-3 main-tiles">
-                <p><a href="#/games">Одбери игра</a></p>
-            </div>
-        </div>
-        <div class="row">
-            <router-outlet></router-outlet>
-        </div>
-  `
+    template: `<div class="row">
+                    <div class="col-md-12">
+                        <router-outlet></router-outlet>
+                    </div>
+               </div>`
 })
 @RouteConfig([
     { path: '/', name: 'root', redirectTo: ['/Home'] },
